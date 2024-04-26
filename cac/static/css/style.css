@@ -1,0 +1,152 @@
+:root{
+    --primary-color: #9f3647;
+    --bg-color:#181419;
+    --secondary-color:#ffffff;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+    --white-color: #fdf5ef;
+/* fuentes */
+ --primary-font:'Nunito', sans-serif;
+}
+
+/* selector all */
+*{
+margin: 0;
+padding: 0;
+}
+
+body, html{
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+}
+
+header{
+    background-color: var(--primary-color);
+    padding: 2vh 0;
+}
+
+nav { /*distribucion cajas header*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Cajas header, iniciar sesion, reg,etc*/
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+/*Pseudoclase. nombra primer y ult hijo*/
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li:first-child{
+    margin-left: 0;
+}
+
+nav ul li:last-child{
+    margin-right: 2vw;
+}
+
+nav ul li a, nav>a{ /*las transformo en elemento de bloque*/
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: background-color 0.3s; /*Animación cuadro*/
+}
+
+nav ul li a:hover{
+    background-color: var(--third-bis-color);
+}
+
+
+
+#banner {
+    background-image: url(../img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;/*alto*/
+    box-shadow: inset 0 0 0 2000px rgba(80, 80, 80, 0.5);
+}
+
+.card-banner{
+    padding: 70px;
+    text-align: center;
+    color: #f2f2f2;
+    /*position: ;*/
+    top: 45vh;
+    left: 40vh;
+    z-index: 2;
+}
+
+.card-banner h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.card-banner h2{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+/*display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vh;
+    height: 100vh;*/
+
+.btn-cac{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.8s;
+}
+
+
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(1.1);
+    }100%{
+        transform: scale(1);
+    }
+}
+
+.btn-cac:hover{
+    animation: pulse 0.5s infinite alternate;
+}
+
+
+
+#logo{
+    font-weight: bold;
+}
+
+/*selectores de etiquetas*/
+a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+
+/*.search-title{
+    font-size: 4rem;
+}
+
+.movie-item-img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}*/
